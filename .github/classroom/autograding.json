@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Intro to Variables Topic",
+      "setup": "pip install -r requirements.txt && pip install -e .",
+      "run": "pytest tests/topics/intro_to_variables/",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}

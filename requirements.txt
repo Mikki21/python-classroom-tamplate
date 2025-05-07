@@ -1,7 +1,7 @@
-# Add your project dependencies here
-pytest
-flake8
-black
-isort
-pytest-cov
-mypy
+# Development Dependencies
+pytest>=7.0.0
+flake8>=6.0.0
+black>=23.0.0
+isort>=5.10.0
+pytest-cov>=4.0.0
+mypy>=1.0.0

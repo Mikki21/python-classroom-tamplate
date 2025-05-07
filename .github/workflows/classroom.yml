@@ -6,16 +6,24 @@ on:
   pull_request:
     branches: [ main ]
 
+# Add permissions block to ensure proper access
+permissions:
+  checks: write
+  actions: read
+  contents: read
+  
 jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for better compatibility
       
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.13'  # Updated to match student's Python version
+          python-version: '3.13'
           
       - name: Install dependencies
         run: |

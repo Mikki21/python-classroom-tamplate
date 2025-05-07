@@ -3,9 +3,19 @@
     {
       "name": "Intro to Variables Topic",
       "setup": "pip install -r requirements.txt && pip install -e .",
-      "run": "pytest tests/topics/intro_to_variables/",
+      "run": "pytest -v tests/topics/intro_to_variables/",
       "input": "",
       "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Individual Variable Tests",
+      "setup": "pip install -r requirements.txt && pip install -e .",
+      "run": "python -m pytest tests/topics/intro_to_variables/test_variables.py::test_create_variable tests/topics/intro_to_variables/test_variables.py::test_create_string_variable tests/topics/intro_to_variables/test_variables.py::test_add_variables tests/topics/intro_to_variables/test_variables.py::test_concatenate_strings tests/topics/intro_to_variables/test_variables.py::test_variable_type_conversion -v",
+      "input": "",
+      "output": "5 passed",
       "comparison": "included",
       "timeout": 10,
       "points": 5
